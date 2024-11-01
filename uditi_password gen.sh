@@ -6,11 +6,11 @@ echo "Enter password LENGTH (12-32): "
 read LENGTH
 
 if [ "$LENGTH" -lt 12 ] || [ "$LENGTH" -gt 32 ]; then
-  echo "Error: Length must be between 12 and 32."
+  echo "Length must be bw 12 and 32."
   
 fi
 
-password=$(cat /dev/urandom | tr -dc "$characs" | head -c "$length")
+password=$(cat /dev/urandom | tr -dc "$characs" | head -c "$LENGTH")
 
 echo "Generated Password: $password"
 
